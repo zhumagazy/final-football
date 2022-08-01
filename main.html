@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./bootstrap-5.2.0-dist/css/bootstrap.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar-native flexbox">
+      <div class="nav-logo-container flexbox">
+        <img src="./img/logo.png" alt="app logo" class="logo" />
+        <h2>Football App</h2>
+      </div>
+      <div class="nav-btn-section flexbox">
+        <div class="nav-btn flexbox" id="game-page-link">
+          <a href="./main.html" class="flexbox"> Game</a>
+        </div>
+        <div class="nav-btn flexbox" id="about-page-link">
+          <a href="./about.html" class="flexbox"> About Team</a>
+        </div>
+      </div>
+    </nav>
+    <section class="main-game-section flexbox">
+      <h2 class="section-logo">Game</h2>
+      <div class="board flexbox">
+        <div class="team team-one-container flexbox">
+          <h3>Team One</h3>
+          <input
+            type="number"
+            id="team-one-score"
+            class="team-score"
+            placeholder="Score..."
+          />
+          <textarea
+            placeholder="Player1, Player2, Player3, Player4...."
+            class="textarea"
+            name="team-one-players"
+            id="team-one-players"
+            cols="30"
+            rows="8"
+          ></textarea>
+        </div>
+        <div class="team team-two-container flexbox">
+          <h3>Team Two</h3>
+          <input
+            type="number"
+            id="team-two-score"
+            class="team-score"
+            placeholder="Score..."
+          />
+          <textarea
+            placeholder="Player1, Player2, Player3, Player4...."
+            class="textarea"
+            name="team-two-players"
+            id="team-two-players"
+            cols="30"
+            rows="8"
+          ></textarea>
+        </div>
+      </div>
+      <div class="main-section-btn-group">
+        <button class="btn btn-success" id="res-btn">Result</button>
+        <button class="btn btn-danger" id="start-over-btn">Start Over</button>
+      </div>
+    </section>
+    <footer class="flexbox">
+      <p>Phone number - <strong>+7 707 706 0512</strong></p>
+      <p>Telegram - <strong>@asyLLLxan</strong></p>
+    </footer>
+    <div class="result-container">
+      <div>Winer - <span id="winner-team"></span></div>
+      <div class="flexbox scores-container">
+        Scores:
+        <div class="team-scores-container flexbox">
+          <div class="flexbox score-team-labels">
+            <span> Team One - <span id="team-one-total-score"></span> </span>
+            <span>Team Two - <span id="team-two-total-score"></span></span>
+          </div>
+          <div class="flexbox team-scores">
+            <span id="team-one-scores-combination"></span>
+            <span id="team-two-scores-combination"></span>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-danger" id="res-cont-close-btn">Close</button>
+    </div>
+  </body>
+</html>
